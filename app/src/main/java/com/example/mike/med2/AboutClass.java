@@ -12,33 +12,34 @@ import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 
 public class AboutClass extends AppCompatActivity {
-    protected Button butgame;
-    boolean flag=false;
+
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.nerv_system);
-        final TranslateAnimation animation = new TranslateAnimation(-500, 300, 50, 50);
-        animation.setDuration(1000);
-        animation.setFillAfter(true);
 
-        final Button btnTranslate = (Button)findViewById(R.id.translate);
-        Button button=(Button)findViewById(R.id.body);
+///Animation anim=(Animation) AnimationUtils.loadAnimation(this,R.anim.trans);
+      Button brain = (Button)findViewById(R.id.brain);
 
 
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (flag == false) {
-                    btnTranslate.startAnimation(animation);
-                    flag = true;
+       /// brain.startAnimation(anim);
 
-                }
-            }
-        });
+       brain.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent intent=new Intent(AboutClass.this,Brain.class);
+               startActivity(intent);
+
+           }
+       });
+
+
+
     }
+
+
 
 
 }
