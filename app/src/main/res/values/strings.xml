@@ -22,5 +22,6 @@
     <string name="title_of_sensor_system">Сенсорная система</string>
     <string name="title_of_pokrovnaya_system">Покровная система</string>
     <string name="title_of_endocr_system">Эндокринная система</string>
+    <string name="body_picture">picture</string>
 
 </resources>
