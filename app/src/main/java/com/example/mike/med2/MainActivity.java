@@ -15,7 +15,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick(View view) {
+        BodyStructure body;
+
+        switch (view.getId()) {
+
+            case R.id.nerv_system:
+               body=new BodyStructure(1);
+                break;
+            case R.id.endocryn_system:
+             body=new BodyStructure(2);
+
+                break;
+        }
         Intent intent = new Intent(MainActivity.this, BodyStructure.class);
-        startActivity(intent);
+       startActivity(intent);
     }
 }
