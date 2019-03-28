@@ -1,4 +1,4 @@
-package com.example.mike.med2.fragments;
+package com.example.mike.med2.fragments_of_system;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,10 +10,9 @@ import android.view.ViewGroup;
 
 import com.example.mike.med2.R;
 
-public class EndocrynFragment extends Fragment {
-
+public class PischevaritSystemFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.endocryn_fragment,null);
+        return inflater.inflate(R.layout.pishevarit_fragment,null);
     }
 }

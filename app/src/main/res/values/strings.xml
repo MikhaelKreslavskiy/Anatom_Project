@@ -23,5 +23,6 @@
     <string name="title_of_pokrovnaya_system">Покровная система</string>
     <string name="title_of_endocr_system">Эндокринная система</string>
     <string name="body_picture">picture</string>
+    <string name="nervbodystr">nervbody</string>
 
 </resources>

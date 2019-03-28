@@ -15,19 +15,30 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick(View view) {
-        BodyStructure body;
+        Intent intent = new Intent(MainActivity.this, BodyStructure.class);
 
         switch (view.getId()) {
 
             case R.id.nerv_system:
-               body=new BodyStructure(1);
+              intent.putExtra("choice",1);
                 break;
             case R.id.endocryn_system:
-             body=new BodyStructure(2);
-
+                intent.putExtra("choice",2);
+                break;
+            case R.id.oporno_dvig_apparat:
+                intent.putExtra("choice",3);
+                break;
+            case R.id.pishevat_system:
+                intent.putExtra("choice",4);
+                break;
+            case R.id.mochevyd_system:
+                intent.putExtra("choice",5);
+                break;
+            case R.id.sensor_system:
+                intent.putExtra("choice",6);
                 break;
         }
-        Intent intent = new Intent(MainActivity.this, BodyStructure.class);
+
        startActivity(intent);
     }
 }
