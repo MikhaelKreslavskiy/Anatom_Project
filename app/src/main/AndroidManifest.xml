@@ -24,11 +24,11 @@
 
 </activity>
         <activity
-            android:name=".Brain">
+            android:name=".info_about_organs.InfoBreathSystemActivity">
             android:label="@string/about_title">
 
         </activity>
-        <activity android:name=".Game"></activity>
+        <activity android:name=".Test"></activity>
     </application>
 
 </manifest>

@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.mike.med2.info_about_organs.InfoBreathSystemActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -37,8 +39,23 @@ public class MainActivity extends AppCompatActivity {
             case R.id.sensor_system:
                 intent.putExtra("choice",6);
                 break;
+            case R.id.breath_system:
+                intent.putExtra("choice",7);
+                break;
+            case R.id.cyrculyatornaya_system:
+                intent.putExtra("choice",8);
+                break;
+            case R.id.pokrovnaya_system:
+                intent.putExtra("choice",9);
+                break;
         }
 
        startActivity(intent);
+
+    }
+    private void InfoIntent()
+    {
+        Intent intent=new Intent(MainActivity.this,InfoBreathSystemActivity.class);
+        startActivity(intent);
     }
 }

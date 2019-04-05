@@ -5,11 +5,14 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 
+import com.example.mike.med2.fragments_of_system.BreathSystemFragment;
+import com.example.mike.med2.fragments_of_system.CirculyatorSystemFragment;
 import com.example.mike.med2.fragments_of_system.EndocrynFragment;
 import com.example.mike.med2.fragments_of_system.MochevydSystemFragment;
 import com.example.mike.med2.fragments_of_system.NervSystemFragment;
 import com.example.mike.med2.fragments_of_system.OporniyDvigFragment;
 import com.example.mike.med2.fragments_of_system.PischevaritSystemFragment;
+import com.example.mike.med2.fragments_of_system.PokrovnayaSystemFragment;
 import com.example.mike.med2.fragments_of_system.SensorSystemFragment;
 
 public class BodyStructure extends AppCompatActivity {
@@ -19,6 +22,9 @@ public class BodyStructure extends AppCompatActivity {
     private OporniyDvigFragment oporniyDvigFragment;
     private SensorSystemFragment sensorSystemFragment;
     private MochevydSystemFragment mochevydSystemFragment;
+    private BreathSystemFragment breathSystemFragment;
+    private CirculyatorSystemFragment circulyatorSystemFragment;
+    private PokrovnayaSystemFragment pokrovnayaSystemFragment;
 
 
     private FragmentManager manager;
@@ -35,12 +41,19 @@ public class BodyStructure extends AppCompatActivity {
 
         setContentView(R.layout.body_structure_layout);
 choice=getIntent().getExtras().getInt("choice");
+
+
         nervSystemFragment=new NervSystemFragment();
         endocrynFragment=new EndocrynFragment();
         mochevydSystemFragment=new MochevydSystemFragment();
         sensorSystemFragment=new SensorSystemFragment();
         oporniyDvigFragment=new OporniyDvigFragment();
         pischevaritSystemFragment=new PischevaritSystemFragment();
+        breathSystemFragment=new BreathSystemFragment();
+        circulyatorSystemFragment=new CirculyatorSystemFragment();
+        pokrovnayaSystemFragment = new PokrovnayaSystemFragment();
+
+
 
         manager=getSupportFragmentManager();
         transaction=manager.beginTransaction();
@@ -63,6 +76,15 @@ choice=getIntent().getExtras().getInt("choice");
                 break;
             case 6:
                 transaction.add(R.id.container,sensorSystemFragment);
+                break;
+            case 7:
+                transaction.add(R.id.container,breathSystemFragment);
+                break;
+            case 8:
+                transaction.add(R.id.container,circulyatorSystemFragment);
+                break;
+            case 9:
+                transaction.add(R.id.container,pokrovnayaSystemFragment);
                 break;
 
         }
