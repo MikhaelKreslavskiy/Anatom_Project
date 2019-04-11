@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.mike.med2.info_about_organs.InfoBreathSystemActivity;
 
@@ -57,5 +58,25 @@ public class MainActivity extends AppCompatActivity {
     {
         Intent intent=new Intent(MainActivity.this,InfoBreathSystemActivity.class);
         startActivity(intent);
+    }
+
+    public void BlueClick(View view) {
+        Toast.makeText(getApplicationContext(),"Системы воспроизводства(Эндодермальные)",Toast.LENGTH_LONG).show();
+    }
+
+    public void RedClick(View view) {
+        Toast.makeText(getApplicationContext(),"Системы поддержки(мезодермальные) ",Toast.LENGTH_LONG).show();
+    }
+
+
+
+    public void GreenClick(View view) {
+        Toast.makeText(getApplicationContext()," Системы восприятия(эктодермальные) ",Toast.LENGTH_LONG).show();
+
+
+    }
+
+    public void YellowClick(View view) {
+        Toast.makeText(getApplicationContext(),"Эндокринная система ",Toast.LENGTH_LONG).show();
     }
 }
