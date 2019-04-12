@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,26 +22,29 @@ public class BreathSystemFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
 
-            View v = inflater.inflate(R.layout.breath_system_fragment, null);
+         View view = inflater.inflate(R.layout.breath_system_fragment,null);
+        Button gortan=(Button) view.findViewById(R.id.but_gortan);
+        Button traheya=(Button) view.findViewById(R.id.but_traheya);
+        Button nose=(Button) view.findViewById(R.id.nose);
+        Button glotka=(Button) view.findViewById(R.id.glotka);
+        Button lungs = (Button) view.findViewById(R.id.lungs);
+        lungs.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(),InfoBreathSystemActivity.class);
+                startActivity(intent);
 
-            Button button = (Button) v.findViewById(R.id.lungs);
-            button.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                  Intent intent=new Intent(getActivity(),InfoBreathSystemActivity.class);
-                  startActivity(intent);
+            }
+        });
+        lungs.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Toast.makeText(getContext(),"Lungs",Toast.LENGTH_LONG).show();
 
-                }
-            });
-            button.setOnLongClickListener(new View.OnLongClickListener() {
-                @Override
-                public boolean onLongClick(View v) {
-                   Toast.makeText(getContext(),"Lungs",Toast.LENGTH_LONG).show();
+                return false;
+            }
+        });
 
-                    return false;
-                }
-            });
-
-            return v;
+        return view;
         }
 
 
