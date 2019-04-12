@@ -21,7 +21,7 @@ public class Test extends AppCompatActivity {
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("message");
         final TextView textView=(TextView) findViewById(R.id.textView2);
-        myRef.setValue("Hello, Wrld!");
+        myRef.setValue("Hello, Wrgld!");
 
 
 
