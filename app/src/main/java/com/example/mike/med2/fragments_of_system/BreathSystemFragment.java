@@ -38,12 +38,43 @@ public class BreathSystemFragment extends Fragment {
         lungs.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                Toast.makeText(getContext(),"Lungs",Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(),"Легкие и бронхи",Toast.LENGTH_LONG).show();
 
                 return false;
             }
         });
+        gortan.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Toast.makeText(getContext(),"Гортань",Toast.LENGTH_LONG).show();
 
+                return false;
+            }
+        });
+        glotka.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Toast.makeText(getContext(),"Глотка",Toast.LENGTH_LONG).show();
+
+                return false;
+            }
+        });
+        nose.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Toast.makeText(getContext(),"Нос",Toast.LENGTH_LONG).show();
+
+                return false;
+            }
+        });
+        traheya.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Toast.makeText(getContext(),"Трахея",Toast.LENGTH_LONG).show();
+
+                return false;
+            }
+        });
         return view;
         }
 
