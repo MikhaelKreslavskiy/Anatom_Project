@@ -26,7 +26,6 @@
         <activity
             android:name=".info_about_organs.InfoBreathSystemActivity">
             android:label="@string/about_title">
-
         </activity>
         <activity android:name=".Test"></activity>
     </application>

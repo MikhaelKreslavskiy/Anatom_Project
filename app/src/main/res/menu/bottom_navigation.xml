@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:id="@+id/info"
+    android:icon="@drawable/ic_info_black_24dp"
+    android:title="Info"/>
+
+    <item
+        android:id="@+id/forum"
+        android:icon="@drawable/ic_forum_black_24dp"
+        android:title="Forum"/>
+
+    <item
+        android:id="@+id/body"
+        android:icon="@drawable/ic_accessibility_black_24dp"
+        android:title="Body"/>
+
+    <item
+        android:id="@+id/books"
+        android:icon="@drawable/ic_library_books_black_24dp"
+        android:title="Books"/>
+
+    <item
+        android:id="@+id/games"
+        android:icon="@drawable/ic_videogame_asset_black_24dp"
+        android:title="Games"/>
+
+
+</menu>
