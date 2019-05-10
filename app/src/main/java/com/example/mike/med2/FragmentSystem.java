@@ -64,11 +64,6 @@ public class FragmentSystem extends Fragment implements FragmentSystemClick{
 
 
 
-    private void InfoIntent()
-    {
-        Intent intent=new Intent(getContext(),InfoBreathSystemActivity.class);
-        startActivity(intent);
-    }
 
 
 

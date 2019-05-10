@@ -24,5 +24,7 @@
     <string name="title_of_endocr_system">Эндокринная система</string>
     <string name="body_picture">picture</string>
     <string name="nervbodystr">nervbody</string>
+    <string name="title">Информация</string>
+    <string name="entermessage">Введите сообщение...</string>
 
 </resources>

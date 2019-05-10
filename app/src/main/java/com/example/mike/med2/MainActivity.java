@@ -18,6 +18,8 @@ import com.example.mike.med2.info_about_organs.InfoBreathSystemActivity;
 
 public class MainActivity extends AppCompatActivity {
 private FragmentSystem fragmentSystem=new FragmentSystem();
+private FragmentInfo fragmentInfo =new FragmentInfo();
+private  FragmentForum fragmentForum =new FragmentForum();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +33,16 @@ private FragmentSystem fragmentSystem=new FragmentSystem();
                     case R.id.body:
                         change(fragmentSystem);
                         return true;
+                    case R.id.info:
+                        change(fragmentInfo);
+                        return true;
+
+                    case R.id.forum:
+                        change(fragmentForum);
+                        return true;
+
                 }
+
                 return  false;
             }
         });
@@ -44,15 +55,19 @@ private FragmentSystem fragmentSystem=new FragmentSystem();
 
 
     public void YellowClick(View view) {
+        fragmentSystem.YellowClick(view);
     }
 
     public void GreenClick(View view) {
+        fragmentSystem.GreenClick(view);
     }
 
     public void RedClick(View view) {
+        fragmentSystem.RedClick(view);
     }
 
     public void BlueClick(View view) {
+        fragmentSystem.BlueClick(view);
     }
 
 
