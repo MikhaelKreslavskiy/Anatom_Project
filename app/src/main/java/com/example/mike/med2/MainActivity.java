@@ -25,6 +25,8 @@ private  FragmentForum fragmentForum =new FragmentForum();
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+change(fragmentInfo);
+
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
