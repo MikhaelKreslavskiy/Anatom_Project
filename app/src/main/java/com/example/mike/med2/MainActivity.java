@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 private FragmentSystem fragmentSystem=new FragmentSystem();
 private FragmentInfo fragmentInfo =new FragmentInfo();
 private  FragmentForum fragmentForum =new FragmentForum();
+private FragmentBooks fragmentBooks = new FragmentBooks();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +43,9 @@ change(fragmentInfo);
                     case R.id.forum:
                         change(fragmentForum);
                         return true;
-
+                    case R.id.books:
+                        change(fragmentBooks);
+                        return true;
                 }
 
                 return  false;
