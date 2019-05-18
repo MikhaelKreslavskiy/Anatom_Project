@@ -1,5 +1,8 @@
 package com.example.mike.med2;
 
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -31,7 +34,7 @@ public class Book extends AppCompatActivity {
         final EditText auth=(EditText)findViewById(R.id.author) ;
         final EditText annotation =(EditText)findViewById(R.id.annotation);
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        final DatabaseReference myRef = database.getReference();
+        final DatabaseReference myRef = database.getReference().child("books");
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,18 +49,29 @@ public class Book extends AppCompatActivity {
                 }
                 else {
                     Description description = new Description(name, author, ann);
-                    myRef.push().setValue(description);
-                    nameedit.setText("");
-                    annotation.setText("");
-                    auth.setText("");
-             Toast.makeText(getApplicationContext(),"Ваша книга добавлена",Toast.LENGTH_LONG).show();
+                    if(isOnline()==true) {
+                        myRef.push().setValue(description);
+                        nameedit.setText("");
+                        annotation.setText("");
+                        auth.setText("");
+                        Toast.makeText(getApplicationContext(), "Ваша книга добавлена", Toast.LENGTH_LONG).show();
 
-
+                    }
+                    else
+                    {
+                        Toast.makeText(getApplicationContext(),"Нет подключения к Интернету",Toast.LENGTH_LONG).show();
+                    }
                 }
 
             }
         });
 
+    }
+    public boolean isOnline() {
+        ConnectivityManager cm =
+                (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        return netInfo != null && netInfo.isConnectedOrConnecting();
     }
 
 }

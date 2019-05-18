@@ -45,7 +45,7 @@ public class FragmentForum extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(dataAdapter);
 
-        myRef.setValue("Hello, World!");
+
         sendbut.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                String message=editText.getText().toString();
