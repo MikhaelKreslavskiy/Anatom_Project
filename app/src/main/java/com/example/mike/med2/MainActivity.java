@@ -21,6 +21,7 @@ private FragmentSystem fragmentSystem=new FragmentSystem();
 private FragmentInfo fragmentInfo =new FragmentInfo();
 private  FragmentForum fragmentForum =new FragmentForum();
 private FragmentBooks fragmentBooks = new FragmentBooks();
+private FragmentGame fragmentGame =new FragmentGame();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,7 +47,11 @@ change(fragmentInfo);
                     case R.id.books:
                         change(fragmentBooks);
                         return true;
+                    case R.id.games:
+                        change(fragmentGame);
+                        return true;
                 }
+
 
                 return  false;
             }

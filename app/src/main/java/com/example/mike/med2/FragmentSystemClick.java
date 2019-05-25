@@ -23,4 +23,5 @@ interface FragmentSystemClick extends ComponentCallbacks, View.OnCreateContextMe
     void GreenClick(View view);
 
     void YellowClick(View view);
+
 }

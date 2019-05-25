@@ -1,6 +1,9 @@
 package com.example.mike.med2;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -14,6 +17,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 
 import com.example.mike.med2.info_about_organs.InfoBreathSystemActivity;
 import com.google.firebase.database.ChildEventListener;
@@ -29,6 +34,7 @@ import static android.support.constraint.Constraints.TAG;
 
 public class FragmentForum extends Fragment {
 
+
     @Nullable
     @Override
 
@@ -41,7 +47,7 @@ public class FragmentForum extends Fragment {
         final ArrayList<String>messages=new ArrayList<>();
          final DataAdapter dataAdapter=new DataAdapter(getContext(),messages);
          final RecyclerView recyclerView=(RecyclerView)view.findViewById(R.id.messages_recycler);
-        recyclerView.findViewById(R.id.messages_recycler);
+
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(dataAdapter);
 
@@ -53,6 +59,10 @@ public class FragmentForum extends Fragment {
                {
                    Toast.makeText(getContext(), "Вы не ввели сообщение", Toast.LENGTH_SHORT).show();
                    return;
+               }
+               if(isOnliner()==false)
+               {
+                   Toast.makeText(getContext(),"Нет доступа к Интернету",Toast.LENGTH_SHORT).show();
                }
                else
                {
@@ -93,6 +103,17 @@ public class FragmentForum extends Fragment {
             }
         });
 
+
+
         return view;
+    }
+    public boolean isOnliner() {
+        String cs = Context.CONNECTIVITY_SERVICE;
+        ConnectivityManager cm = (ConnectivityManager) getActivity().getSystemService(cs);
+        if (cm.getActiveNetworkInfo() == null) {
+            return false;
+        } else {
+            return true;
+        }
     }
 }

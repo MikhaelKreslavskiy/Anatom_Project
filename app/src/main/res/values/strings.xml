@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">med2</string>
+    <string name="app_name">Анатомичка</string>
     <string name="about_text">
 
 
@@ -26,5 +26,7 @@
     <string name="nervbodystr">nervbody</string>
     <string name="title">Информация</string>
     <string name="entermessage">Введите сообщение...</string>
+    <string name="info_about_app_first">Приложение для интерактивного изучения основных систем организма человека,а также самых важных
+    органов.Нажав на цветовую кнопку,вы получите к какой группе относится нужная вам система</string>
 
 </resources>

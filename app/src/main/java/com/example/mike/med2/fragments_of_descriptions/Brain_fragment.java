@@ -8,16 +8,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.example.mike.med2.R;
-import com.example.mike.med2.Test;
-import com.example.mike.med2.Test;
-import com.example.mike.med2.info_about_organs.InfoBreathSystemActivity;
-
-import java.util.ArrayList;
+import com.example.mike.med2.test_activity.TestCont;
 
 public class Brain_fragment extends Fragment {
     @Nullable
@@ -29,7 +23,7 @@ public class Brain_fragment extends Fragment {
         Button button = (Button) v.findViewById(R.id.toest);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent=new Intent(getActivity(),Test.class);
+                Intent intent=new Intent(getActivity(),TestCont.class);
                 startActivity(intent);
 
             }

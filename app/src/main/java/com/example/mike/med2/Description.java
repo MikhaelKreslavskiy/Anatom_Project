@@ -14,4 +14,9 @@ public class Description {
     public Description() {
 
     }
+
+    public Description(String name, String author) {
+        this.name = name;
+        this.author = author;
+    }
 }
