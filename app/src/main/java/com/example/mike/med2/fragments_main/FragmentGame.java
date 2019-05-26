@@ -1,4 +1,4 @@
-package com.example.mike.med2;
+package com.example.mike.med2.fragments_main;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.mike.med2.Mendel;
+import com.example.mike.med2.R;
 import com.example.mike.med2.test_activity.TestCont;
 
 public class FragmentGame extends Fragment {
@@ -22,7 +24,7 @@ public class FragmentGame extends Fragment {
        View view=inflater.inflate(R.layout.game_fragment,null);
         final TextView count=(TextView)view.findViewById(R.id.moneytext);
         final TestCont testCont=new TestCont();
-        testCont.money=testCont.result;
+        testCont.money+=testCont.result;
         count.setText("У вас денег:  "+ testCont.money);
         Button button=(Button)view.findViewById(R.id.buy);
         Button perehod=(Button) view.findViewById(R.id.perehod);

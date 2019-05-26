@@ -1,10 +1,12 @@
-package com.example.mike.med2;
+package com.example.mike.med2.viewholders;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
+
+import com.example.mike.med2.R;
 
 public class ViewHolderBooks extends RecyclerView.ViewHolder {
     TextView auth;

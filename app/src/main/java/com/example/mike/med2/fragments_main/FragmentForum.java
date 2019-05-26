@@ -1,4 +1,4 @@
-package com.example.mike.med2;
+package com.example.mike.med2.fragments_main;
 
 import android.content.Context;
 import android.content.Intent;
@@ -20,6 +20,8 @@ import android.widget.Toast;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
+import com.example.mike.med2.DataAdapter;
+import com.example.mike.med2.R;
 import com.example.mike.med2.info_about_organs.InfoBreathSystemActivity;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;

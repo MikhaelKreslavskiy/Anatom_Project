@@ -1,25 +1,23 @@
 package com.example.mike.med2;
 
-import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.design.bottomappbar.BottomAppBar;
-import android.support.design.internal.BottomNavigationItemView;
-import android.support.design.internal.BottomNavigationMenuView;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
-import android.widget.Toast;
 import android.support.design.widget.BottomNavigationView;
 
-import com.example.mike.med2.info_about_organs.InfoBreathSystemActivity;
+import com.example.mike.med2.fragments_main.FragmentBooks;
+import com.example.mike.med2.fragments_main.FragmentForum;
+import com.example.mike.med2.fragments_main.FragmentGame;
+import com.example.mike.med2.fragments_main.FragmentInfo;
+import com.example.mike.med2.fragments_main.FragmentSystem;
 
 public class MainActivity extends AppCompatActivity {
 private FragmentSystem fragmentSystem=new FragmentSystem();
 private FragmentInfo fragmentInfo =new FragmentInfo();
-private  FragmentForum fragmentForum =new FragmentForum();
+private FragmentForum fragmentForum =new FragmentForum();
 private FragmentBooks fragmentBooks = new FragmentBooks();
 private FragmentGame fragmentGame =new FragmentGame();
     @Override

@@ -1,4 +1,4 @@
-package com.example.mike.med2;
+package com.example.mike.med2.fragments_main;
 
 import android.arch.lifecycle.LifecycleOwner;
 import android.arch.lifecycle.ViewModelStoreOwner;

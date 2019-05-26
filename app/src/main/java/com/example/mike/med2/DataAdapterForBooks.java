@@ -2,7 +2,6 @@ package com.example.mike.med2;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -10,7 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.lang.annotation.Target;
+import com.example.mike.med2.viewholders.ViewHolderBooks;
+
 import java.util.ArrayList;
 
 public class DataAdapterForBooks extends RecyclerView.Adapter<ViewHolderBooks> {

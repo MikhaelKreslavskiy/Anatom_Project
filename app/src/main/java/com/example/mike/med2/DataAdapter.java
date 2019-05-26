@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.mike.med2.viewholders.ViewHolder;
+
 import java.util.ArrayList;
 
 public class DataAdapter extends RecyclerView.Adapter<ViewHolder> {

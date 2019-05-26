@@ -1,4 +1,4 @@
-package com.example.mike.med2;
+package com.example.mike.med2.fragments_main;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,9 +10,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.example.mike.med2.BodyStructure;
+import com.example.mike.med2.fragments_main.FragmentSystemClick;
+import com.example.mike.med2.R;
 import com.example.mike.med2.info_about_organs.InfoBreathSystemActivity;
 
-public class FragmentSystem extends Fragment implements FragmentSystemClick{
+public class FragmentSystem extends Fragment implements FragmentSystemClick {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
