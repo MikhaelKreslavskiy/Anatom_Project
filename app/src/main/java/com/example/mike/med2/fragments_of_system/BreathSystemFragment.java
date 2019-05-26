@@ -14,7 +14,7 @@ import android.widget.Toast;
 import com.example.mike.med2.info_about_organs.InfoBreathSystemActivity;
 import com.example.mike.med2.R;
 
-public class BreathSystemFragment extends Fragment {
+public class BreathSystemFragment extends Fragment  {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -42,12 +42,11 @@ public class BreathSystemFragment extends Fragment {
             }
         });
         gortan.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
+           @Override
             public boolean onLongClick(View v) {
-                Toast.makeText(getContext(),"Гортань",Toast.LENGTH_LONG).show();
+               Toast.makeText(getContext(),"Гортань",Toast.LENGTH_LONG).show();
 
-                return false;
-            }
+               return false; }
         });
         glotka.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
@@ -75,6 +74,8 @@ public class BreathSystemFragment extends Fragment {
         });
         return view;
         }
+
+
 
 
 }
